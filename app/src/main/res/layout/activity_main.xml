@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.improscanner.MainActivity">
+
+    <SurfaceView
+        android:id="@+id/surface_view"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:background="#44837e7e"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/bottom_overlay_connection_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/overlay_text"/>
+
+        <LinearLayout
+            android:id="@+id/bottom_overlay_container1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/label_ip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IP\t\t\t:"
+                android:textSize="@dimen/overlay_text"
+                android:textColor="@color/white">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/text_ip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/overlay_text"
+                android:textColor="@color/white">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_overlay_container2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/bottom_overlay_container1">
+            <TextView
+                android:id="@+id/label_pin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PIN\t:"
+                android:textSize="@dimen/overlay_text"
+                android:textColor="@color/white">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/text_pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/overlay_text"
+                android:textColor="@color/white">
+
+            </TextView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bottom_overlay_container2"
+            android:layout_centerInParent="true"
+            android:onClick="confirmData" />
+
+    </RelativeLayout>
+</FrameLayout>
